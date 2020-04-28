@@ -1,5 +1,9 @@
-module.exports = {
-    dir: {
-        input: "src"
-    }
-};
+module.exports = function(eleventyConfig) {
+    eleventyConfig.addPassthroughCopy("src/admin");
+
+    return {
+        dir: {
+            input: "src"
+        }
+    };
+}
