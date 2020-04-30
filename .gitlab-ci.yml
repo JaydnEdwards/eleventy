@@ -1,15 +1,21 @@
 image: node:latest
 
 cache:
-  key: ${CI_COMMIT_REF_SLUG}
-  paths:
-  - .npm/
-
-before_script:
-  - npm ci --cache .npm --prefer-offline
+  key: $CI_COMMIT_REF_SLUG
+  paths: 
+    - node_modules/
 
 stages:
   - deploy
+
+npm_install:
+  stage: build
+  image: node:12
+  script:
+    - npm install
+  artifacts:
+    paths: 
+      - node_modules/
 
 deploy:
   stage: deploy
