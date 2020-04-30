@@ -8,10 +8,6 @@ cache:
 before_script:
   - npm ci --cache .npm --prefer-offline
 
-test_async:
-  script:
-  - node ./specs/start.js ./specs/async.spec.js
-
 stages:
   - deploy
 
@@ -23,6 +19,7 @@ deploy:
   only:
     - master
   script:
+    - node ./specs/start.js ./specs/async.spec.js
     - npm i
     # your build command
     - npm run build
