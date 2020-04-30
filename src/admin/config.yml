@@ -54,3 +54,32 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+      
+  - label: "Globals"
+    name: "globals"
+    files:
+      - label: "Site Data"
+        name: "site_data"
+        delete: false
+        file: "src/_data/site.json"
+        fields:
+          - {label: "Site Name", name: "name", widget: "string"}
+          - {label: "Site Url", name: "url", widget: "string"}
+          - {label: "Author Name", name: "authorName", widget: "string"}
+          - {label: "Author Email Address", name: "authorEmail", widget: "string"}
+          - {label: "Author Twitter Handle", name: "authorHandle", widget: "string", required: false}
+          - {label: "Footer Short Description", name: "shortDesc", widget: "string"}
+          - {label: "Maximum Posts Per Page", name: "maxPostsPerPage", widget: "number", default: 5}
+          
+    - label: "Navigation"
+        name: "nav"
+        delete: false
+        file: "src/_data/navigation.json"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Text", name: "text", widget: "string"}
+              - {label: "Url", name: "url", widget: "string"}
+              - {label: "Is url to external site?", name: "external", widget: "boolean"}
