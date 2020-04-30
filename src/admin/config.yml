@@ -71,7 +71,7 @@ collections:
           - {label: "Footer Short Description", name: "shortDesc", widget: "string"}
           - {label: "Maximum Posts Per Page", name: "maxPostsPerPage", widget: "number", default: 5}
           
-    - label: "Navigation"
+      - label: "Navigation"
         name: "navigation"
         delete: false
         file: "src/_data/navigation.json"
