@@ -1,6 +1,7 @@
 backend:
   name: gitlab
   repo: jaydn/eleventy
+  branch: master
   auth_type: implicit
   app_id: 8a41d7533e4ae61eaa37604c6e5043f9c14b46483b2f4f102cc06cd40d1faea6
   api_root: https://git.norvrandt.dev/api/v4
