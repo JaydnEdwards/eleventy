@@ -1,7 +1,7 @@
 image: node:12
 
 cache:
-  key: $CI_COMMIT_REF_SLUG
+  key: eleventy
   paths:
     - node_modules/
     
