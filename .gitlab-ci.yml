@@ -1,19 +1,9 @@
+image node:12
+
 cache:
   key: $CI_COMMIT_REF_SLUG
   paths: 
     - node_modules/
-
-stages:
-  - deploy
-
-npm_install:
-  stage: deploy
-  image: node:12
-  script:
-    - npm install
-  artifacts:
-    paths: 
-      - node_modules/
 
 deploy:
   stage: deploy
@@ -23,5 +13,6 @@ deploy:
   only:
     - master
   script:
+    - npm install
     - npm run build
     - npx netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
