@@ -2,9 +2,9 @@ image node:12
 
 cache:
   key: $CI_COMMIT_REF_SLUG
-  paths: 
+  paths:
     - node_modules/
-
+    
 deploy:
   stage: deploy
   environment:
