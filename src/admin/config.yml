@@ -72,7 +72,7 @@ collections:
           - {label: "Maximum Posts Per Page", name: "maxPostsPerPage", widget: "number", default: 5}
           
     - label: "Navigation"
-        name: "nav"
+        name: "navigation"
         delete: false
         file: "src/_data/navigation.json"
         fields:
