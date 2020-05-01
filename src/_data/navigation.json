@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "text": "Home",
+      "url": "/",
+      "external": false
+    },
+    {
+      "text": "Work",
+      "url": "/work",
+      "external": false
+    },
+    {
+      "text": "Blog",
+      "url": "/blog",
+      "external": false
+    },
+    {
+      "text": "Twitter",
+      "url": "https://twitter.com/Jaydn_Edwards",
+      "external": true
+    }
+  ]
+}
