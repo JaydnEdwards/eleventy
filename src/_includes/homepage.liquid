@@ -1,13 +1,14 @@
 {% include _header.liquid %}    
     <main>
         <article class="page-content">
+            <h2>{{ title }}</h2>
             {{ content }}
         </article>
         
         <section class="blog-feed">
-            <h2>Latest blogs posts</h2>
+            <h2 class="feed-title">Latest blog posts</h2>
             <div class="feed-grid">
-            {% for post in collections.blogposts limit: 3 %}
+            {% for post in collections.blogposts limit: 3 reversed %}
                 <article class="blog-feed-item">
                     <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
                     <p class="date">{{ post.date | date: "%d-%m-%Y" }}</p>
@@ -19,13 +20,13 @@
         </section>
         
         <section class="portfolio-feed">
-            <h2>My most recent work</h2>
+            <h2 class="feed-title">My most recent work</h2>
             <div class="feed-grid">
-            {% for post in collections.portfolioposts limit: 3 %}
+            {% for post in collections.portfolioposts limit: 3 reversed %}
                 <article class="portfolio-feed-item">
                     <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
                     <p class="date">{{ post.date | date: "%d-%m-%Y" }}</p>
-                    <img src="{{ post.data.thumbnail }}" style="width: 500px; height: 300px;"/>
+                    <a href="{{ post.url }}"><img src="{{ post.data.thumbnail }}" style="width: 500px; height: 300px;"/></a>
                 </article>
             {% endfor %}
             </div>

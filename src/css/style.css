@@ -91,11 +91,17 @@ select {
 /* My Code */
 /* Variables */
 :root{
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
   
-  --bodybg: #ffffff;
+    --bodybg: #EBE3E1;
+    --headerbg: #000000;
+    --headercolor: #ffffff;
+    --footerbg: #000000;
+    --footercolor: #ffffff;
+    --cardbg: #ffffff;
+    
 }
 
 body{
@@ -109,6 +115,8 @@ main{
 
 .page-content{
     width: 65ch;
+    margin: 0 auto;
+    margin-bottom: 80px;
 }
 
 section{
@@ -127,7 +135,23 @@ section{
     grid-column: auto;
     -ms-grid-column: auto;
     grid-row: 2 / -1;
+    
+    background-color: var(--cardbg);
+    padding: 1em 1em;
+    
+    display: grid;
+    justify-content: center;
 }
+
+.portfolio-feed-item{
+    padding-bottom: 2em;
+}
+
+.feed-title{
+    font-size: 2em;
+    margin-bottom: 1.25em;
+}
+
 
 .date{
     margin: 0;
@@ -135,4 +159,45 @@ section{
 
 img{
     object-fit: cover;
+}
+
+header{
+    background-color: var(--headerbg);
+    color: var(--headercolor);
+    
+    display: flex;
+    margin-bottom: 80px;
+    padding: 1em 5vw;
+}
+
+header a{
+    color: var(--headercolor);
+}
+
+.nav{
+    width: 275px;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav li{
+    list-style: none;
+}
+
+footer{
+    background-color: var(--footerbg);
+    color: var(--footercolor);
+    
+    margin-top: 80px;
+}
+
+footer a{
+    color: var(--footercolor);
+}
+
+footer ul{
+    margin-bottom: 0;
 }
