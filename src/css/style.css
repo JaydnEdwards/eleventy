@@ -95,16 +95,18 @@ select {
 
 /* Variables */
 :root{
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
-  
     --bodybg: #EBE3E1;
     --headerbg: #000000;
     --headercolor: #ffffff;
     --footerbg: #000000;
     --footercolor: #ffffff;
     --cardbg: #ffffff;
+    
+    --lineheight: 1.5;
+    
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: var(--lineheight);
     
 }
 
@@ -115,6 +117,10 @@ body{
 main{
     margin: 0 auto;
     width: 90vw;
+}
+
+p{
+    margin-top: 2em;
 }
 
 .page-content{
